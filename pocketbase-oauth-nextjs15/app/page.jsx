@@ -4,7 +4,7 @@ Thanks for Using my Template!
 Please make sure to read README in order to set this up according to your needs
 Made by Skell <3
 
-Consider giving a star :)
+Consider leaving a star :)
 
 */
 
