@@ -1,5 +1,5 @@
 # 🌷 Pocketbase OAuth2 Template with Next.js
-This is a template made by me in order to speed up Pocketbase OAuth implementation while working with Next.js. This is one of the simplest implementations in comparison with other tutorials I've seen here and there, so give it a try if you don't want to make one from scratch!
+🧭 This template is designed to simplify the integration of PocketBase OAuth2 authentication with Next.js. Created with ease of use in mind, it offers one of the simplest implementations compared to other tutorials. Perfect for those who don’t want to start from scratch!  
 
 ![image](https://github.com/user-attachments/assets/c04f0ef0-03aa-426f-a8f7-2e607cff7085)
 
