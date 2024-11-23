@@ -25,11 +25,13 @@ import { redirect } from 'next/navigation';
 const pocketBaseURL = "http://127.0.0.1:8090" // Adjust to your pocketbase URL
 const redirectUrl = 'http://localhost:3000/api/oauth2-redirect'; // Adjust to your API URL. This Current URL works with this template
 
-// Initialize PocketBase Conntection
-const pb = new PocketBase(pocketBaseURL);
+
 
 // Default GET Function
 export async function GET(req) {
+    // Initialize PocketBase Conntection
+    const pb = new PocketBase(pocketBaseURL);
+
     // Initialize Cookies
     const cookieStore = cookies();
 

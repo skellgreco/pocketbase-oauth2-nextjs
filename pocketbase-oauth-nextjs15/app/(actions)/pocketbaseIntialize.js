@@ -17,36 +17,35 @@ This file initializes pocketbase connection so it can be used across the whole c
 */
 
 // Imports
-import PocketBase from 'pocketbase';
-import { cookies } from 'next/headers';
-
-// Initialize Pocketbase connection
-const pb = new PocketBase('http://127.0.0.1:8090'); // Change the URL to your Pocketbase URL
-pb.autoCancellation(false); // Disables autoCancellation as it creates errors
+import PocketBase from "pocketbase";
+import { cookies } from "next/headers";
 
 // Default Function
 export const initializePocketBase = () => {
-    // Initialize Cookies
-    const cookieStore = cookies();
+  // Initialize Pocketbase connection
+  const pb = new PocketBase("http://127.0.0.1:8090"); // Change the URL to your Pocketbase URL
+  pb.autoCancellation(false); // Disables autoCancellation as it creates errors
 
-    // Get the saved authData saved as a cookie after logging in
-    const authData = cookieStore.get('authData');
+  // Initialize Cookies
+  const cookieStore = cookies();
 
-    // If there is authData initialize a Signed in Connection
-    if (authData && authData.value) {
-        try {
-            const parsedAuthData = JSON.parse(decodeURIComponent(authData.value));
-            pb.authStore.save(parsedAuthData.token, parsedAuthData.model);
-            console.log('PocketBase Auth Initialized:', pb.authStore.isValid);
-        
-        // If not just throw an error
-        } catch (error) {
-            console.error('Failed to parse authData:', error);
-        }
-    } else {
-        console.warn('No valid authData found.');
+  // Get the saved authData saved as a cookie after logging in
+  const authData = cookieStore.get("authData");
+
+  // If there is authData initialize a Signed in Connection
+  if (authData && authData.value) {
+    try {
+      const parsedAuthData = JSON.parse(decodeURIComponent(authData.value));
+      pb.authStore.save(parsedAuthData.token, parsedAuthData.model);
+      console.log("PocketBase Auth Initialized:", pb.authStore.isValid);
+
+      // If not just throw an error
+    } catch (error) {
+      console.error("Failed to parse authData:", error);
     }
+  } else {
+    console.warn("No valid authData found.");
+  }
 
-
-    return pb;
+  return pb;
 };
