@@ -41,7 +41,9 @@ The webserver will check for an authData cookie. If the cookie does not exist, y
 ![image](https://github.com/user-attachments/assets/f4aa28fb-f792-46ca-9453-85ecc6210ca0)
 
 *Note: This code is written for Discord Authentication. Please edit your `signIn/page.jsx` in order to display the correct logo on the button in case any other method is being used*
+
 Once you click, you will get redirected to a Discord OAuth2 Page. Once you authorize the app, you will get redirected to `/dashboard` where you will be able to see all your extracted authData in a JSON Form. You can use that data the way you like for your project. On the meantime, an API Call is going to be made and the webserver will save the new data on Pocketbase (if the user is new) and save an authorization cookie as well
+
 **IMPORTANT**: The cookie for authData has a `maxLife` of 3600 seconds (1 hour). Once the cookie expires, the user has to login again. You can adjust this setting on the code!
 
 ### About the Code
