@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(7, 7, 7);
+  color: white;
+}
+
+.authenticationGrid {
+  display: grid;
+  grid-template-columns: 1;
+  margin-inline: 25%;
+  margin-top: 10%;
+  border-radius: 12px;
+  padding: 20px;
+  background: rgb(24, 20, 47);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(24, 20, 47, 1) 0%,
+    rgba(32, 27, 64, 1) 49%,
+    rgba(28, 24, 54, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(24, 20, 47, 1) 0%,
+    rgba(32, 27, 64, 1) 49%,
+    rgba(28, 24, 54, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(24, 20, 47, 1) 0%,
+    rgba(32, 27, 64, 1) 49%,
+    rgba(28, 24, 54, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#18142f",endColorstr="#1c1836",GradientType=1);
+}
+
+.authenticationItem {
+  background: rgb(223, 223, 225);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(223, 223, 225, 1) 0%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(223, 223, 225, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(223, 223, 225, 1) 0%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(223, 223, 225, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(223, 223, 225, 1) 0%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(223, 223, 225, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfdfe1",endColorstr="#dfdfe1",GradientType=1);
+  color: rgb(0, 0, 0);
+  margin-inline: 20%;
+  padding-block: 15px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.authenticationItem:hover {
+  border-radius: 20px;
+}
+
+.discord-logo {
+  display: inline-block;
+  width: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  .discord-logo {
+    width: 30%;
+  }
+  .authenticationGrid {
+    margin-inline: 25%;
+    margin-top: 40%;
+  }
+}
+
+.dashboard-btn {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+  
+}
+
+.dashboard-btn:hover {
+  background-color: rgb(84, 163, 248);
+  color: white;
+}
